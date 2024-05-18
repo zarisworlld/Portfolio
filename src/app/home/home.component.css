@@ -1,0 +1,99 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(100vh - 70px)
+}
+
+.portfolio-image {
+    width: 40%;
+    height: 100%;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.introduction {
+    width: 60%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.introduction .detail {
+    max-width: 450px;
+}
+.introduction .detail h1 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+
+.introduction .detail h1 span {
+    position: relative;
+}
+
+.introduction .detail h1 span::before {
+    content: "";
+    border: 1px solid #9b9b9b;
+    position: absolute;
+    left: 120%;
+    top: 50%;
+    width: 700px;
+}
+.detail-btn {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.detail-btn a {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: .5rem 1rem;
+}
+
+/* #introduction,#portfolioImage{
+height: 100%;
+display: inline-block;
+}
+#introduction{
+    padding-top: 10rem;
+    padding-left: 10rem;
+    vertical-align: top;
+    text-align: left;
+}
+.article{
+    font-weight: 700;
+}
+.title{
+    line-height: 6rem;
+    font-size: 5rem;
+}
+.line{
+    border-bottom: 1px solid;
+    width: 80%;
+    position: relative;
+    top: 4rem;
+}
+#portfolioImage img{
+    width: 100% !important;
+    height: 100% !important;
+}
+#pageFooter:after {
+    counter-increment: page;
+    content:"Page " counter(page);
+    left: 0; 
+    top: 89vh;
+    white-space: nowrap; 
+    z-index: 20;
+    -moz-border-radius: 5px; 
+    -moz-box-shadow: 0px 0px 4px #222;  
+    background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);  
+  }
+
+ */

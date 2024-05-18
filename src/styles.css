@@ -1,0 +1,15 @@
+@import "primeng/resources/primeng.css";
+@import "primeflex/primeflex.css";
+@import "primeicons/primeicons.css";
+@import "primeng/resources/themes/aura-dark-noir/theme.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh !important;
+    overflow: hidden;
+}

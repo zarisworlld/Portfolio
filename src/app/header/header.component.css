@@ -1,0 +1,29 @@
+:host ::ng-deep .p-menubar-end{
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+.header {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem;
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    list-style: none;
+    align-items: center;
+}
+
+.menu ul li {
+    padding: .5rem;
+}
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+}
