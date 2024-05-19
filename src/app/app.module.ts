@@ -11,7 +11,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenubarModule } from 'primeng/menubar';
-
+import { ProgressBarModule } from 'primeng/progressbar';
+import { ToastModule } from 'primeng/toast';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,10 @@ import { MenubarModule } from 'primeng/menubar';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MenubarModule
+    MenubarModule,
+    ProgressBarModule,
+    ToastModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
