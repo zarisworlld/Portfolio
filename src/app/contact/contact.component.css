@@ -1,0 +1,24 @@
+.page-title{
+    height: 20%;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    align-content:center;
+    padding-left: 3rem;
+}
+.content{
+    height: 80%;
+    padding-top: 4rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+.description div{
+    display: flex;
+    margin-bottom: 3rem;
+}
+.description div h3{
+    margin-left: 1rem;
+}
+.information{
+   display: flex; 
+   padding-top: 4rem;
+}

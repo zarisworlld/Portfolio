@@ -11,15 +11,38 @@
         src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
       </iframe>
     </div>
-    <div>
-        <div class="w-4">
-            <h3></h3>
+    <div class="w-full information">
+        <div class="description w-4">
+            <div>
+                <i class="pi pi-telegram"></i>
+                <h3>zariisworld</h3>
+            </div>
+            <div>
+                <i class="pi pi-home"></i>
+                <h3>Tehran</h3>
+            </div>
+            <div>
+                <i class="pi pi-envelope"></i>
+                <h3>zahrakheiri.eng@gmail.com</h3>
+            </div>
         </div>
-        <div class="w-4">
-
-        </div>
-        <div class="w-4">
-
+        <div class="form w-4">
+            <form [formGroup]="contactForm">
+                <!-- <div class="p-field p-col-12 p-md-4">
+                    <span class="p-float-label">
+                      <input type="text" id="inputtext" pInputText formControlName="fullname" />
+                      <label for="inputtext">InputText</label>
+                    </span>
+                  </div> -->
+                <p-floatLabel>
+                    <input pInputText id="email" formControlName="email"/>
+                    <label for="email">Email</label>
+                </p-floatLabel>
+                <p-floatLabel>
+                    <input pInputText id="subject" formControlName="subject" />
+                    <label for="subject">Subject</label>
+                </p-floatLabel>
+            </form>
         </div>
     </div>
 </div>
