@@ -22,3 +22,26 @@
    display: flex; 
    padding-top: 4rem;
 }
+p-floatlabel{
+    display: flex;
+    margin-bottom: 2rem;
+}
+:host ::ng-deep p-floatlabel span{
+    width: 100%;
+}
+input{
+    width: 100%;
+    padding-bottom: 0.3rem;
+    padding-top: 0.3rem;
+    font-size: 0.9rem;
+    padding-left: 0.6rem;
+}
+textarea{
+    color: #ffffff;
+    background: #09090b;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #3f3f46;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, outline-color 0.2s;
+    appearance: none;
+    border-radius: 6px;
+}

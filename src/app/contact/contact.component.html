@@ -3,13 +3,7 @@
 </div>
 <div class="content">
     <div class="map w-full">
-        <iframe class="w-full"
-        id="inlineFrameExample"
-        title="Inline Frame Example"
-        width="300"
-        height="200"
-        src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
-      </iframe>
+        <iframe id="inlineFrameExample"  height="200" width="300" class="w-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207344.0754367783!2d51.18284757799681!3d35.707740216702526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e00491ff3dcd9%3A0xf0b3697c567024bc!2sTehran%2C%20Tehran%20Province%2C%20Iran!5e0!3m2!1sen!2s!4v1716819585511!5m2!1sen!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="w-full information">
         <div class="description w-4">
@@ -28,21 +22,25 @@
         </div>
         <div class="form w-4">
             <form [formGroup]="contactForm">
-                <!-- <div class="p-field p-col-12 p-md-4">
-                    <span class="p-float-label">
-                      <input type="text" id="inputtext" pInputText formControlName="fullname" />
-                      <label for="inputtext">InputText</label>
-                    </span>
-                  </div> -->
                 <p-floatLabel>
-                    <input pInputText id="email" formControlName="email"/>
-                    <label for="email">Email</label>
+                    <input pInputText id="fullname" formControlName="fullname" placeholder="FullName"/>
                 </p-floatLabel>
                 <p-floatLabel>
-                    <input pInputText id="subject" formControlName="subject" />
-                    <label for="subject">Subject</label>
+                    <input pInputText id="email" formControlName="email" placeholder="Email"/>
+                </p-floatLabel>
+                <p-floatLabel>
+                    <input pInputText id="subject" formControlName="subject" placeholder="Subject"/>
                 </p-floatLabel>
             </form>
+        </div>
+        <div class="w-4 text-center" style="align-content: center;">
+            <p-floatLabel style="height: 100%;">
+                <textarea  class="w-9"
+                    id="float-input" 
+                    rows="8" cols="30" 
+                    pInputTextarea formControlName="Message" placeholder="Message">
+                </textarea>
+            </p-floatLabel>
         </div>
     </div>
 </div>
