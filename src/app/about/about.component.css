@@ -12,3 +12,26 @@
 .photos .w-4{
     margin-left: 1.5rem;
 }
+.description{
+    height: 60vh;
+    padding: 8rem 10rem 0 10rem;
+    margin-left: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.description  span {
+    position: relative;
+    padding: 0.3rem 0;
+}
+.description  h1 {
+   padding-bottom: 0.5rem;
+}
+.description  span::before {
+    content: "";
+    border: 1px solid #9b9b9b;
+    position: absolute;
+    left: 120%;
+    bottom: 0;
+    width: 75px;
+}
