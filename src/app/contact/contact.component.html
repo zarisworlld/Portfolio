@@ -1,5 +1,6 @@
 <div class="page-title">
     <h1>Contact</h1>
+    <p-button label="Submit" class="mr-4" *ngIf="contactForm.valid && contactForm.dirty && contactForm.touched"  severity="secondary" (onClick)="submitForm()" />
 </div>
 <div class="content">
     <div class="map w-full">
@@ -20,27 +21,29 @@
                 <h3>zahrakheiri.eng@gmail.com</h3>
             </div>
         </div>
-        <div class="form w-4">
+        <div class="form w-8">
             <form [formGroup]="contactForm">
-                <p-floatLabel>
-                    <input pInputText id="fullname" formControlName="fullname" placeholder="FullName"/>
-                </p-floatLabel>
-                <p-floatLabel>
-                    <input pInputText id="email" formControlName="email" placeholder="Email"/>
-                </p-floatLabel>
-                <p-floatLabel>
-                    <input pInputText id="subject" formControlName="subject" placeholder="Subject"/>
-                </p-floatLabel>
+                <div class="w-6">
+                    <p-floatLabel>
+                        <input pInputText id="fullname" formControlName="fullname" placeholder="FullName"/>
+                    </p-floatLabel>
+                    <p-floatLabel>
+                        <input pInputText id="email" formControlName="email" placeholder="Email"/>
+                    </p-floatLabel>
+                    <p-floatLabel>
+                        <input pInputText id="subject" formControlName="subject" placeholder="Subject"/>
+                    </p-floatLabel>
+                </div>
+                <div class="w-6 text-right">
+                    <p-floatLabel style="height: 100%;">
+                        <textarea  class="w-9"
+                            id="float-input" 
+                            rows="8" cols="30" 
+                            pInputTextarea formControlName="message" placeholder="message">
+                        </textarea>
+                    </p-floatLabel>
+                </div>
             </form>
-        </div>
-        <div class="w-4 text-center" style="align-content: center;">
-            <p-floatLabel style="height: 100%;">
-                <textarea  class="w-9"
-                    id="float-input" 
-                    rows="8" cols="30" 
-                    pInputTextarea formControlName="Message" placeholder="Message">
-                </textarea>
-            </p-floatLabel>
         </div>
     </div>
 </div>

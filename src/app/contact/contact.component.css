@@ -1,4 +1,7 @@
 .page-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 20%;
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
@@ -44,4 +47,11 @@ textarea{
     transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, outline-color 0.2s;
     appearance: none;
     border-radius: 6px;
+}
+form{
+    display: flex;
+}
+:host ::ng-deep p-button button {
+    padding: 0.5rem;
+    cursor: pointer !important;
 }

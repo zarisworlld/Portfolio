@@ -18,6 +18,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { AutoCompleteModule } from "primeng/autocomplete";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FloatLabelModule } from 'primeng/floatlabel';
+import { ButtonModule } from 'primeng/button';
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +43,10 @@ import { FloatLabelModule } from 'primeng/floatlabel';
     InputTextModule,
     AutoCompleteModule,
     BrowserAnimationsModule,
-    FloatLabelModule
+    FloatLabelModule,
+    ButtonModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
