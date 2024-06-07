@@ -10,6 +10,7 @@ import { MessageService } from 'primeng/api';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
+  contactModel!: Contact;
   constructor(private http:HttpClient,private messageService: MessageService){
 
   }
@@ -23,9 +24,12 @@ export class ContactComponent {
   submitForm(){
     if(this.contactForm.controls["fullname"].value && this.contactForm.controls["message"].value)
     {
-      var model = null;
-      //var model = new Contact(this.contactForm.controls["fullname"].value ,this.contactForm.controls["message"].value,this.contactForm.controls["email"].value || null,this.contactForm.controls["subject"].value);
-      this.http.post(`${this.expressUrl}\contact`,model).subscribe((res)=>{
+      this.contactModel =  {
+      fullName:this.contactForm.value.fullname ,
+      email:this.contactForm.value.email ,
+      message:this.contactForm.value.message ,
+      subject:this.contactForm.value.subject } as Contact
+      this.http.post(`${this.expressUrl}\contact`,this.contactModel).subscribe((res)=>{
         if(res)
           this.messageService.add({severity:'success', summary: 'Success', detail: 'Successfully Submitted'});
         else
