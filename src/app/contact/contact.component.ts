@@ -7,14 +7,14 @@ import { MessageService } from 'primeng/api';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent {
   contactModel!: Contact;
   constructor(private http:HttpClient,private messageService: MessageService){
 
   }
-  expressUrl:string="localhost:3000";
+  expressUrl:string="http://localhost:3000";
   contactForm = new FormGroup({
     fullname:new FormControl<string>('',Validators.required),
     email:new FormControl<string | null>(null),
@@ -28,8 +28,8 @@ export class ContactComponent {
       fullName:this.contactForm.value.fullname ,
       email:this.contactForm.value.email ,
       message:this.contactForm.value.message ,
-      subject:this.contactForm.value.subject } as Contact
-      this.http.post(`${this.expressUrl}\contact`,this.contactModel).subscribe((res)=>{
+      subject:this.contactForm.value.subject } as Contact;
+      this.http.post(`${this.expressUrl}/contact`,this.contactModel).subscribe((res)=>{
         if(res)
           this.messageService.add({severity:'success', summary: 'Success', detail: 'Successfully Submitted'});
         else
