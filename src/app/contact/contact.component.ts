@@ -14,7 +14,7 @@ export class ContactComponent {
   constructor(private http:HttpClient,private messageService: MessageService){
 
   }
-  expressUrl:string="http://localhost:3000";
+  expressUrl:string='http://localhost:3000/contact';
   contactForm = new FormGroup({
     fullname:new FormControl<string>('',Validators.required),
     email:new FormControl<string | null>(null),
@@ -29,7 +29,7 @@ export class ContactComponent {
       email:this.contactForm.value.email ,
       message:this.contactForm.value.message ,
       subject:this.contactForm.value.subject } as Contact;
-      this.http.post(`${this.expressUrl}/contact`,this.contactModel).subscribe((res)=>{
+      this.http.post<any>(`${this.expressUrl}`,this.contactModel).subscribe((res)=>{
         if(res)
           this.messageService.add({severity:'success', summary: 'Success', detail: 'Successfully Submitted'});
         else
